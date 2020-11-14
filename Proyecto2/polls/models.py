@@ -36,3 +36,20 @@ class Choice(models.Model):
 
 '''forin key le dice al dj que cada opcion esta relacionada 
  a una pregunta   votes = models.IntegerField(default=0)'''
+    
+class Clientes(models.Model):
+    nombre=models.CharField(max_length=30)
+    direccion=models.CharField(max_length=50)
+    email=models.EmailField()
+    tfn=models.CharField(max_length=7)
+    
+    
+class Articulos(models.Model):
+    nombre=models.CharField(max_length=30)
+    seccion=models.CharField(max_length=20)
+    precio=models.IntegerField()
+    
+class Pedidos(models.Model):
+    numero=models.IntegerField()
+    fecha=models.DateField()
+    entrega=models.BooleanField()    
