@@ -2,6 +2,7 @@
 #empleando urlconfs
 from django.urls import path
 #from Proyecto1.views import import index
+#rama3
 from . import views
 app_name = 'polls'
 urlpatterns = [
