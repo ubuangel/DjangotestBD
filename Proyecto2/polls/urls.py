@@ -5,7 +5,7 @@ from django.urls import path
 from . import views
 #aplicacion de encusta vista detalles
 app_name = 'polls'
-
+#rama1
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
