@@ -10,6 +10,8 @@ from django.urls import reverse
 
 from django.views import generic
 
+from django.utils import timezone
+
 from  .models  import Question,Choice
 #creando un averdares funcion vote() en template
 #devuelve un objet ohttpresponse 
@@ -27,6 +29,8 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
+    
+    
 
 
 class ResultsView(generic.DetailView):
@@ -54,7 +58,14 @@ def vote(request, question_id):
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
 
-
+def get_queryset(self):
+    """
+    Return the last five published questions (not including those set to be
+    published in the future).
+    """
+    return Question.objects.filter(
+        pub_date__lte=timezone.now()
+    ).order_by('-pub_date')[:5]
    
    
    
