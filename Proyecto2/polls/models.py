@@ -11,6 +11,8 @@ representa un campo de base de datos en el modelo.
 ojo se importo en proyecto del file djvenv estamos desde el repositorio local (file git )
 TAMBIEN 
 eclipse con git ,e crea una carpeta de git donde se apropia del proyecto y lo usa
+
+14 noviembre creando rama
 '''
 import datetime
 from django.db import models

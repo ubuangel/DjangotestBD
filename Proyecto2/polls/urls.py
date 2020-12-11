@@ -1,9 +1,12 @@
 
 #empleando urlconfs
 from django.urls import path
-#from Proyecto1.views import import index
+
 from . import views
+#aplicacion de encusta vista detalles
 app_name = 'polls'
+
+
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
