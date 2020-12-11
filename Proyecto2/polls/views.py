@@ -9,7 +9,7 @@ from django.template  import loader
 from django.urls import reverse
 
 from  .models  import Question,Choice
-
+#creando un averdares funcion vote() en template
 #devuelve un objet ohttpresponse 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
